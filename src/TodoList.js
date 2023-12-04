@@ -5,12 +5,11 @@ import Todo from "./Todo";
 class TodoList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
   render() {
     const { list, renderItems } = this.props;
     return (
-      <div id="todoList" ref={this.todoListRef}>
+      <div id="todoList">
         <ul>
           {list?.slice(0, renderItems).map((todo, index) => (
             <Todo index={index} key={todo.id} todo={todo} {...this.props} />
